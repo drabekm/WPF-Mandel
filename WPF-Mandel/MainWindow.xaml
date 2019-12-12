@@ -1,0 +1,66 @@
+﻿<Window x:Class="WPF_Mandel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Mandel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="460.4" Width="812.8" ResizeMode="NoResize">
+    <Grid Margin="0,0,-0.4,-1" KeyDown="Grid_KeyDown">
+        <Button Content="Multi Thread" HorizontalAlignment="Left" Margin="628,58,0,0" VerticalAlignment="Top" Width="156" Click="Button_Click" RenderTransformOrigin="0.5,0.5" Height="43" FontFamily="Verdana">
+        </Button>
+        <Button x:Name="StandartButton" Content="Single Thread" HorizontalAlignment="Left" Height="43" Margin="628,10,0,0" VerticalAlignment="Top" Width="156" Click="StandartButton_Click" FontFamily="Verdana"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="241" Margin="10,10,0,0" VerticalAlignment="Top" Width="361">
+            <Image x:Name="myImage" HorizontalAlignment="Left" Height="240" Margin="0.2,-0.8,-1.8,0" VerticalAlignment="Top" Width="360"/>
+        </Border>
+        <TextBox x:Name="text_xpos" HorizontalAlignment="Left" Height="23" Margin="387,15,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" FontFamily="Verdana" TextChanged="text_xpos_TextChanged"/>
+        <TextBox x:Name="text_ypos" HorizontalAlignment="Left" Height="23" Margin="387,43,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" FontFamily="Verdana" TextChanged="text_ypos_TextChanged"/>
+        <TextBox x:Name="text_zoom" HorizontalAlignment="Left" Height="23" Margin="387,71,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120" FontFamily="Verdana" TextChanged="text_zoom_TextChanged"/>
+        <TextBox x:Name="text_maxIter" HorizontalAlignment="Left" Height="23" Margin="387,99,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="120" FontFamily="Verdana" TextChanged="text_maxIter_TextChanged"/>
+        <Label Content="X souřadnice" HorizontalAlignment="Left" Margin="512,10,0,0" VerticalAlignment="Top" Height="27" FontFamily="Verdana"/>
+        <Label Content="Y souřadnice" HorizontalAlignment="Left" Margin="512,39,0,0" VerticalAlignment="Top" Height="27" FontFamily="Verdana"/>
+        <Label Content="Zoom" HorizontalAlignment="Left" Margin="512,67,0,0" VerticalAlignment="Top" Height="27" FontFamily="Verdana"/>
+        <Label Content="Počet iterací" HorizontalAlignment="Left" Margin="512,94,0,0" VerticalAlignment="Top" Height="27" FontFamily="Verdana"/>
+        <TextBox x:Name="text_offset" HorizontalAlignment="Left" Height="44" Margin="10,322,0,0" TextWrapping="Wrap" Text="0,0000000000000000000" VerticalAlignment="Top" Width="472" FontSize="35" FontFamily="Verdana" TextDecorations="{x:Null}" TextChanged="text_offset_TextChanged" IsReadOnlyCaretVisible="True" IsEnabled="False"/>
+        <Button x:Name="button_inc1" Content="↑" HorizontalAlignment="Left" Margin="46,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Click"/>
+        <Button x:Name="button_inc1_Copy" Content="↑" HorizontalAlignment="Left" Margin="69,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy_Click"/>
+        <Button x:Name="button_inc1_Copy1" Content="↑" HorizontalAlignment="Left" Margin="92,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy1_Click"/>
+        <Button x:Name="button_inc1_Copy2" Content="↑" HorizontalAlignment="Left" Margin="115,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy2_Click"/>
+        <Button x:Name="button_inc1_Copy3" Content="↑" HorizontalAlignment="Left" Margin="138,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy3_Click"/>
+        <Button x:Name="button_inc1_Copy4" Content="↑" HorizontalAlignment="Left" Margin="157,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy4_Click"/>
+        <Button x:Name="button_inc1_Copy5" Content="↑" HorizontalAlignment="Left" Margin="180,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy5_Click"/>
+        <Button x:Name="button_inc1_Copy6" Content="↑" HorizontalAlignment="Left" Margin="203,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy6_Click"/>
+        <Button x:Name="button_inc1_Copy7" Content="↑" HorizontalAlignment="Left" Margin="226,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy7_Click"/>
+        <Button x:Name="button_inc1_Copy8" Content="↑" HorizontalAlignment="Left" Margin="249,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy8_Click"/>
+        <Button x:Name="button_inc1_Copy9" Content="↑" HorizontalAlignment="Left" Margin="272,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy9_Click"/>
+        <Button x:Name="button_inc1_Copy10" Content="↑" HorizontalAlignment="Left" Margin="295,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy10_Click"/>
+        <Button x:Name="button_inc1_Copy11" Content="↑" HorizontalAlignment="Left" Margin="318,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy11_Click"/>
+        <Button x:Name="button_inc1_Copy12" Content="↑" HorizontalAlignment="Left" Margin="341,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy12_Click"/>
+        <Button x:Name="button_inc1_Copy13" Content="↑" HorizontalAlignment="Left" Margin="364,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy13_Click"/>
+        <Button x:Name="button_inc1_Copy14" Content="↑" HorizontalAlignment="Left" Margin="387,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy14_Click"/>
+        <Button x:Name="button_inc1_Copy15" Content="↑" HorizontalAlignment="Left" Margin="410,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy15_Click"/>
+        <Button x:Name="button_inc1_Copy16" Content="↑" HorizontalAlignment="Left" Margin="433,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy16_Click"/>
+        <Button x:Name="button_inc1_Copy17" Content="↑" HorizontalAlignment="Left" Margin="456,279,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy17_Click"/>
+        <Button x:Name="button_inc1_Copy18" Content="↓" HorizontalAlignment="Left" Margin="46,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy18_Click"/>
+        <Button x:Name="button_inc1_Copy19" Content="↓" HorizontalAlignment="Left" Margin="69,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy19_Click"/>
+        <Button x:Name="button_inc1_Copy20" Content="↓" HorizontalAlignment="Left" Margin="92,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy20_Click"/>
+        <Button x:Name="button_inc1_Copy21" Content="↓" HorizontalAlignment="Left" Margin="115,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy21_Click"/>
+        <Button x:Name="button_inc1_Copy22" Content="↓" HorizontalAlignment="Left" Margin="138,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy22_Click"/>
+        <Button x:Name="button_inc1_Copy23" Content="↓" HorizontalAlignment="Left" Margin="157,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy23_Click"/>
+        <Button x:Name="button_inc1_Copy24" Content="↓" HorizontalAlignment="Left" Margin="180,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy24_Click"/>
+        <Button x:Name="button_inc1_Copy25" Content="↓" HorizontalAlignment="Left" Margin="203,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy25_Click"/>
+        <Button x:Name="button_inc1_Copy26" Content="↓" HorizontalAlignment="Left" Margin="226,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy26_Click"/>
+        <Button x:Name="button_inc1_Copy27" Content="↓" HorizontalAlignment="Left" Margin="249,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy27_Click"/>
+        <Button x:Name="button_inc1_Copy28" Content="↓" HorizontalAlignment="Left" Margin="272,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy28_Click"/>
+        <Button x:Name="button_inc1_Copy29" Content="↓" HorizontalAlignment="Left" Margin="295,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy29_Click"/>
+        <Button x:Name="button_inc1_Copy30" Content="↓" HorizontalAlignment="Left" Margin="318,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy30_Click"/>
+        <Button x:Name="button_inc1_Copy31" Content="↓" HorizontalAlignment="Left" Margin="341,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy31_Click"/>
+        <Button x:Name="button_inc1_Copy32" Content="↓" HorizontalAlignment="Left" Margin="364,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy32_Click"/>
+        <Button x:Name="button_inc1_Copy33" Content="↓" HorizontalAlignment="Left" Margin="387,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy33_Click"/>
+        <Button x:Name="button_inc1_Copy34" Content="↓" HorizontalAlignment="Left" Margin="410,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy34_Click"/>
+        <Button x:Name="button_inc1_Copy35" Content="↓" HorizontalAlignment="Left" Margin="433,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy35_Click"/>
+        <Button x:Name="button_inc1_Copy36" Content="↓" HorizontalAlignment="Left" Margin="456,372,0,0" VerticalAlignment="Top" Width="23" Height="38" FontSize="25" FontWeight="Bold" Click="button_inc1_Copy36_Click"/>
+        <Label Content="Matěj Drábek matej1drabek@seznam.cz" HorizontalAlignment="Left" Margin="569,394,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button_snapshot" Content="Make Snapshot" HorizontalAlignment="Left" Margin="628,116,0,0" VerticalAlignment="Top" Width="156" RenderTransformOrigin="0.5,0.5" Height="43" FontFamily="Verdana" Click="Button_snapshot_Click"/>
+    </Grid>
+</Window>
